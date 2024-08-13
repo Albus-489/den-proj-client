@@ -3,12 +3,11 @@ import f1 from '../../assets/images/features/f1.jpg';
 import f2 from '../../assets/images/features/f2.jpg';
 import f3 from '../../assets/images/features/f3.jpg';
 
-const IMAGE_PATH = '/src/assets/images/features/';
-
 export const FeaturesComponent = ({
   featuresContent,
   isReverse = false,
   aspect = 'video',
+  imgs = [f1, f2, f3]
 }) => {
   const [featureImage, setFeatureImage] = useState(
     featuresContent[0].pic
@@ -17,8 +16,8 @@ export const FeaturesComponent = ({
   const borderedFeature =
     'border-l-2 border-dark-background dark:border-dark-foreground';
 
-  const toggleSelected = (img, index) => {
-    setFeatureImage(img);
+  const toggleSelected = (index) => {
+    setFeatureImage(imgs[index]);
     setSelectedFeature(index);
   };
 
@@ -67,7 +66,7 @@ const FeaturesHeadingsCmp = ({
           <div
             className={`features_text w-full cursor-pointer px-8 py-2 flex flex-col gap-5
               ${index === isSelectedFeature ? borderedFeature : ''}`}
-            onClick={() => toggleSelected(item.pic, index)}
+            onClick={() => toggleSelected(index)}
             role="button"
             key={index}>
             <div>
