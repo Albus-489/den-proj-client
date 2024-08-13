@@ -100,6 +100,7 @@ export const NavComponent = () => {
 
 const NavOptionsCmp = () => {
   const [t, i18n] = useTranslation();
+  const langPrefix = i18n.language === 'en' ? '/en' : '';
 
   return (
     <ul className="links ml-8 flex items-center gap-8">
@@ -108,7 +109,7 @@ const NavOptionsCmp = () => {
           <li
             key={index}
             className="cursor-pointer hover:text-light-primary1 transition-all ease-in-out duration-100">
-            <Link to={option.path}>{option.name}</Link>
+            <Link to={`${langPrefix}${option.path}`}>{option.name}</Link>
           </li>
         );
       })}
