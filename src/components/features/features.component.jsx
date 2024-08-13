@@ -10,7 +10,7 @@ export const FeaturesComponent = ({
   imgs = [f1, f2, f3]
 }) => {
   const [featureImage, setFeatureImage] = useState(
-    featuresContent[0].pic
+    imgs[0]
   );
   const [isSelectedFeature, setSelectedFeature] = useState(0);
   const borderedFeature =
