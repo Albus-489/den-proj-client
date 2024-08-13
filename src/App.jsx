@@ -27,7 +27,10 @@ function App() {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    
+    setVars((prevVars) => ({
+      ...prevVars,
+      language: lang,
+    }));
   };
 
   return (
