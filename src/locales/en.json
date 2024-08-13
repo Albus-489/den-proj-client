@@ -68,10 +68,34 @@
     ]
   },
 
-  "contact-us-now":"Contact us now!",
+  "contact-us-now": "Contact us now!",
 
-  "promote-card":{
-    "heading":"Transform Your Home with Our Renovation Services",
-    "card-text":"Let us help you bring your dream home to life. Our team of experienced professionals is dedicated to providing high-quality renovation services tailored to your needs."
+  "promote-card": {
+    "heading": "Transform Your Home with Our Renovation Services",
+    "card-text": "Let us help you bring your dream home to life. Our team of experienced professionals is dedicated to providing high-quality renovation services tailored to your needs."
+  },
+
+  "footer": {
+    "headings": {
+      "services": "Services",
+      "copmpany": "Copmpany",
+      "connect": "Connect with us"
+    },
+    "content": {
+      "services-content": [
+        "Home Renovation",
+        "Kitchen Remodeling",
+        "Bathroom Renovation",
+        "About Us",
+        "Contact Us"
+      ],
+      "company-content": [
+        "FAQs",
+        "Testimonials",
+        "Privacy Policy",
+        "Terms of Service",
+        "Sitemap"
+      ]
+    }
   }
 }
