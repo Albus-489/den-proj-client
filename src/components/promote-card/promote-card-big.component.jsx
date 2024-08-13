@@ -39,7 +39,7 @@ const PromoteNoteCmp = ({
   return (
     <div
       className={`promote-card
-                absolute w-[80%]
+                absolute w-[80%] 
                 px-10 max-sm:py-7 py-20 
                 flex max-[965px]:flex-col max-[965px]:gap-10 justify-evenly items-center
                 transition-all duration-200 ease-linear
@@ -49,7 +49,7 @@ const PromoteNoteCmp = ({
                 ${!isHovered & !isFront && defaultBack}
                 ${isHovered & !isFront && hoveredBack}`}>
       <div className="card-notes">
-        <div className="heading font-bold text-[35px]">{heading}</div>
+        <div className={`heading font-bold text-[35px] ${i18n.language === 'fi' && 'break-all'}`}>{heading}</div>
         <div className="text text-[18px] mt-5">{note}</div>
       </div>
       <div className="card-btn">

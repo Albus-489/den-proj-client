@@ -3,8 +3,10 @@ import { NavOptions } from '../../assets/collections/nav-options.js';
 import { Link } from 'react-router-dom';
 import { BtnComponent } from '../btn/btn-component.jsx';
 import { Varhub } from '../../var-hub.context.jsx';
+import { useTranslation } from 'react-i18next';
 
 export const SideNavComponent = ({ toggleSideNav }) => {
+  const [t, i18n] = useTranslation()
   const [vars, setVars] = useContext(Varhub);
 
   const toggleTheme = () => {
@@ -13,6 +15,7 @@ export const SideNavComponent = ({ toggleSideNav }) => {
       isDarkTheme: !vars.isDarkTheme,
     }));
   };
+  const langPrefix = i18n.language === 'en' ? '/en' : '';
 
   return (
     <div className={`${vars.isDarkTheme ? 'dark' : ''}`}>
@@ -21,19 +24,17 @@ export const SideNavComponent = ({ toggleSideNav }) => {
 
       <div className='flex justify-center items-center mt-5 pt-5 px-10'>
           <span onClick={toggleTheme}>
-          <BtnComponent btnText={`${vars.isDarkTheme ? 'Light' : 'Dark'}`} />
+          <BtnComponent btnText={`${vars.isDarkTheme ? t('nav.themes.0') : t('nav.themes.1')}`} />
           </span>
         </div>
 
         <ul className="sidenav-options flex flex-col items-center justify-center lg:gap-[45px] gap-[25px] text-md lg:text-lg mt-10">
-          {NavOptions.map((option, index) => {
+          {t('nav.options', { returnObjects: true }).map((option, index) => {
             return (
               <li
                 key={index}
                 className="cursor-pointer dark:border-2 border-[#ffffff7b] p-2 drop-shadow-2xl shadow w-[60%] md:w-[40%] text-center rounded-lg">
-                <Link to={option.path} onClick={toggleSideNav}>
-                  {option.name}
-                </Link>
+                <Link onClick={toggleSideNav} to={`${langPrefix}${option.path}`}>{option.name}</Link>
               </li>
             );
           })}

@@ -19,7 +19,7 @@ export const HomePage = () => {
   return (
     <HomePageProvider>
       <div className="home-page dark:text-dark-foreground select-none my-0 mx-auto max-w-[1800px] md:shadow-inner-light md:dark:shadow-inner-daynight-dim">
-        <div className="p-10 max-sm:px-2 grid grid-flow-col auto-cols-fr gap-2 max-lg:grid-flow-row">
+        <div className="homepage-contact-us p-10 max-sm:px-2 grid grid-flow-col auto-cols-fr gap-2 max-lg:grid-flow-row">
           <HeadingCmp />
           <AboutUsCpmponent />
         </div>
@@ -38,7 +38,7 @@ export const HomePage = () => {
         <div className="mb-10">
             <PromoteCardBigComponent />
         </div>
-        <div className="mb-16"></div>
+        <div className="mb-16 max-sm:mt-[150px]"></div>
         <FeaturesComponent
           featuresContent={t('features.secondInstance', {returnObjects: true})}
           isReverse={true}
@@ -66,7 +66,7 @@ const HeadingCmp = ({ isBottom = false }) => {
   const [t, i18n] = useTranslation()
 
   return (
-    <div className="px-11">
+    <div className={`px-11 ${i18n.language === 'fi' && 'break-all'}`}>
       <h1
       style={{wordBreak:'anywhere'}}
         className="homepage-column flex flex-col 
@@ -78,25 +78,6 @@ const HeadingCmp = ({ isBottom = false }) => {
       <p className="text-start text-[18px] my-5">
         {isBottom ? t('heading-cmp.bottom.text') : t('heading-cmp.top.text')}
       </p>
-    </div>
-  );
-};
-
-const ButtonsCmp = () => {
-  return (
-    <div className="buttons max-sm:flex-col max-sm:px-4 flex justify-center items-center gap-5">
-      <BtnComponent
-        btnType="wide"
-        btnWidth="190px"
-        btnText="Get a Free Quote"
-        className="w-[190px] max-sm:w-full"
-      />
-      <BtnComponent
-        btnType="wide-outline"
-        btnWidth="190px"
-        btnText="View Our Portfolio"
-        className="w-[190px] max-sm:w-full"
-      />
     </div>
   );
 };

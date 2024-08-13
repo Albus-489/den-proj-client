@@ -29,7 +29,7 @@ export const FeaturesComponent = ({
     <div
       className={`features_instance ${isReverse && 'flex-row-reverse'} 
                   flex justify-between items-center 
-                  max-md:flex-col gap-20 px-10 sm:px-20 md:p-9 max-sm:gap-8 md:gap-14 lg:p-15`}>
+                  max-md:flex-col gap-20 px-2 sm:px-10 md:p-9 max-sm:gap-8 md:gap-14 lg:p-15`}>
       <FeaturesImageCmp featureImage={featureImage} aspect={aspect} />
       <FeaturesHeadingsCmp
         featuresContent={featuresContent}
