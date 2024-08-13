@@ -39,14 +39,14 @@ export const AboutUsCpmponent = () => {
 const ContactFormCmp = ({ formType = 'Name' }) => {
   const [t, i18n] = useTranslation();
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex max-sm:flex-col max-sm:items-center justify-between w-full">
       <div className="form-name">
         {formType === 'Name'
           ? t('contact-us.form-content.name')
           : t('contact-us.form-content.email')}
       </div>
       <input
-        className="bg-transparent w-[80%]
+        className="bg-transparent w-[80%] max-sm:w-[90%]
                                   border-[1px] border-dark-background dark:border-dark-foreground
                                   rounded-2xl text-center focus:outline-none h-9"
         type={formType === 'Name' ? 'username' : 'email'}
