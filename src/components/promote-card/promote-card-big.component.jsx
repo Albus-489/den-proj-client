@@ -49,7 +49,7 @@ const PromoteNoteCmp = ({
                 ${!isHovered & !isFront && defaultBack}
                 ${isHovered & !isFront && hoveredBack}`}>
       <div className="card-notes">
-        <div className="heading font-bold text-xl">{heading}</div>
+        <div className="heading font-bold text-[35px]">{heading}</div>
         <div className="text text-[18px] mt-5">{note}</div>
       </div>
       <div className="card-btn">
