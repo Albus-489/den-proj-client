@@ -32,10 +32,10 @@ const Store = ({ children }) => {
         const metaDescription = document.querySelector('meta[name="description"]');
         if (appVars.language === 'fi') {
             metaDescription.setAttribute('content', 'Asunnon remontti - laadukasta palvelua ja ammattitaitoa');
-            document.title = 'Asunnon Remontti';
+            document.title = 'Ammattimainen asunnon remontointi Suomessa';
         } else {
             metaDescription.setAttribute('content', 'Apartment renovation - quality service and professionalism');
-            document.title = 'Apartment Renovation';
+            document.title = 'Professional Apartment Renovation in Finland';
         }
     }, [appVars.language]);
 
