@@ -11,12 +11,13 @@ import x_ico from '../../assets/images/social/light/twitter.svg';
 import lin_ico from '../../assets/images/social/light/linkedin.svg';
 
 import { Varhub } from '../../var-hub.context';
+import { useTranslation } from 'react-i18next';
 
 const policies = ['#privacy-policy', '#terms-of-service', 'Cookie Policy'];
 
 export const FooterComponent = ({ footer_position = '' }) => {
   return (
-    <footer className='footer mt-5 dark:bg-[#112342] bg-light-accent1'>
+    <footer className="footer mt-5 dark:bg-[#112342] bg-light-accent1">
       <FooterTopCmp />
       <DividerCmp />
       <FooterBottomCmp />
@@ -26,6 +27,7 @@ export const FooterComponent = ({ footer_position = '' }) => {
 
 const FooterTopCmp = () => {
   const [vars, setVars] = useContext(Varhub);
+  const { t } = useTranslation();
 
   const content = [
     {
@@ -66,17 +68,22 @@ const FooterTopCmp = () => {
   return (
     <div
       className={`w-full lg:px-[30%] px-10 py-8 dark:text-dark-foreground max-sm:text-center max-sm:gap-4 flex max-sm:flex-col justify-between items-center`}>
-      {content.map((item, index) => {
-        return index < 2 ? (
+      {content.map((item, parentIndex) => {
+        const columns = ['services-content', 'company-content']
+        return parentIndex < 2 ? (
           <>
-            <div className="flex flex-col gap-2" key={index}>
-              <span className="font-bold text-lg mb-3">{item.name}</span>
+            <div className="flex flex-col gap-2" key={parentIndex}>
+              <span className="font-bold text-lg mb-3">
+                {parentIndex < 1
+                  ? t('footer.headings.services')
+                  : t('footer.headings.copmpany')}
+              </span>
 
               {item.items.map((text, index) => {
                 return text === 'Contact Us' ? (
-                  <a href="#contact-us">{text}</a>
+                  <a href="#contact-us">{t(`footer.content.services-content.${index}`)}</a>
                 ) : (
-                  <div className="cursor-pointer">{text}</div>
+                  <div className="cursor-pointer">{t(`footer.content.${columns[parentIndex]}.${index}`)}</div>
                 );
               })}
             </div>
@@ -84,7 +91,7 @@ const FooterTopCmp = () => {
         ) : (
           <>
             <div className="flex flex-col gap-2">
-              <span className="font-bold text-lg mb-3">{item.name}</span>
+              <span className="font-bold text-lg mb-3">{t('footer.headings.connect')}</span>
 
               {item.items.map((socialItem, index) => {
                 return (
