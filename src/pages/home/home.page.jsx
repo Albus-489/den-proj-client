@@ -49,9 +49,9 @@ export const HomePage = () => {
         <div className="flex justify-center">
           <a href="#contact-us">
             <BtnComponent
-              className="w-[150px]"
+              className="w-[160px] h-[50px]"
               btnType="wide"
-              btnText="Contact us now"
+              btnText={t('contact-us-now')}
             />
           </a>
         </div>
