@@ -74,5 +74,29 @@
   "promote-card": {
     "heading": "Muuta Kotisi Uuteen Upeuteen Remonttipalveluillamme",
     "card-text": "Anna meidän auttaa sinua toteuttamaan unelmiesi koti. Kokenut ammattilaistiimimme on sitoutunut tarjoamaan korkealaatuisia, tarpeidesi mukaan räätälöityjä remonttipalveluja."
+  },
+
+  "footer": {
+    "headings": {
+      "services": "Palvelut",
+      "copmpany": "Yritys",
+      "connect": "Ota yhteyttä"
+    },
+    "content": {
+      "services-content": [
+        "Kodinkunnostus",
+        "Keittiön remontointi",
+        "Kylpyhuoneremontti",
+        "Tietoa meistä",
+        "Ota yhteyttä"
+      ],
+      "company-content": [
+        "UKK",
+        "Asiakaspalautteet",
+        "Tietosuojakäytäntö",
+        "Käyttöehdot",
+        "Sivukartta"
+      ]
+    }
   }
 }
