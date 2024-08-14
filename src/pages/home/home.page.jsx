@@ -12,9 +12,17 @@ import { AboutUsCpmponent } from '../../components/about-us/about-us.component';
 import { PromoteCardBigComponent } from '../../components/promote-card/promote-card-big.component';
 import { CardComponentProvider } from '../../components/promote-card/promotecard.context';
 import { useTranslation } from 'react-i18next';
+import f1 from '../../assets/images/features/f1.jpg'
+import f2 from '../../assets/images/features/f2.jpg'
+import f3 from '../../assets/images/features/f3.jpg'
+import f4 from '../../assets/images/features/f4.jpg'
+import f5 from '../../assets/images/features/f5.jpg'
+import f6 from '../../assets/images/features/f6.jpg'
 
 export const HomePage = () => {
   const { heroImages } = useContext(HomePageContext);
+  const featuresImagesFirst = [f1, f2, f3]
+  const featuresImagesSecond = [f4, f5, f6]
   const [t, i18n] = useTranslation()
   return (
     <HomePageProvider>
@@ -43,6 +51,7 @@ export const HomePage = () => {
           featuresContent={t('features.secondInstance', {returnObjects: true})}
           isReverse={true}
           aspect="square"
+          imgs={featuresImagesSecond}
         />
         <div className="mb-16"></div>
         <HeadingCmp isBottom={true} />
