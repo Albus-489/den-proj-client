@@ -2,7 +2,7 @@ import React from 'react';
 import { BtnComponent } from '../btn/btn-component';
 import { useTranslation } from 'react-i18next';
 
-export const AboutUsCpmponent = () => {
+export const ContactUsCpmponent = () => {
   const [t, i18n] = useTranslation();
 
   return (
@@ -11,7 +11,8 @@ export const AboutUsCpmponent = () => {
       className="about-us-cmp my-0 mx-auto items-center justify-center 
                     w-[500px] max-sm:max-w-[320px] 
                     shadow-2xl p-5 
-                    rounded-lg">
+                    rounded-lg
+                    dark:bg-[#110f1947] bg-[#ffffff70]">
       <form onSubmit={handleSubmit}>
         <div className="text-end">{t('contact-us.slogan')}</div>
         <div className="text-2xl font-bold mb-10">
