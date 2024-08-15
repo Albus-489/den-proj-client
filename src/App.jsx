@@ -24,7 +24,7 @@ function App() {
     } else {
       document.body.style.backgroundColor = '#FFFFFF'; // Light background color
     }
-  }, [vars.isDarkTheme]); // Only re-run the effect if vars.isDarkTheme changes
+  }, [vars.isDarkTheme]);
 
   useEffect(() => {
     const currentPath = window.location.pathname;
