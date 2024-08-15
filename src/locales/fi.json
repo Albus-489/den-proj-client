@@ -1,11 +1,7 @@
 {
   "nav": {
     "options": [
-      { "name": "Koti", "path": "/" },
-      { "name": "Palvelut", "path": "/services" },
-      { "name": "Portfolio", "path": "/portfolio" },
-      { "name": "Meistä", "path": "/about" },
-      { "name": "Ota yhteyttä", "path": "/contact" }
+      { "name": "Koti", "path": "/" }
     ],
     "themes": ["Päivä", "Yö"]
   },
