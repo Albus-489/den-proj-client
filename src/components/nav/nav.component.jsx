@@ -105,7 +105,7 @@ const NavOptionsCmp = () => {
         return (
           <li
             key={index}
-            className="cursor-pointer hover:text-dark-secondary2 transition-all ease-in-out duration-100">
+            className="cursor-pointer hover:text-light-primary1 transition-all ease-in-out duration-100">
             <Link to={`${langPrefix}${option.path}`}>{option.name}</Link>
           </li>
         );
