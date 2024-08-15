@@ -4,18 +4,15 @@ import menu_ico_dark from '../../assets/images/menu_ico_dark.svg';
 import close_ico_dark from '../../assets/images/close_ico_dark.svg';
 import menu_ico_light from '../../assets/images/menu_ico_light.svg';
 import close_ico_light from '../../assets/images/close_ico_light.svg';
+import asunno_logo from '../../assets/images/asunno_logo.svg';
+import asunno_logo_dark from '../../assets/images/asunno_logo_dark.svg';
 
-import { NavOptions } from '../../assets/collections/nav-options.js';
 import { BtnComponent } from '../btn/btn-component.jsx';
+
 import { Link } from 'react-router-dom';
 import useWidth from '../../hooks/useWindowWidth.hook.jsx';
 import { SideNavComponent } from './sidenav.component.jsx';
 import { Varhub } from '../../var-hub.context.jsx';
-
-import asunno_logo from '../../assets/images/asunno_logo.svg';
-import asunno_logo_dark from '../../assets/images/asunno_logo_dark.svg';
-
-import './nav.style.css';
 import { useTranslation } from 'react-i18next';
 
 export const NavComponent = () => {
