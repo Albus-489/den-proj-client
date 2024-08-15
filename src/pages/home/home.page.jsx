@@ -12,6 +12,7 @@ import { ContactUsCpmponent } from '../../components/about-us/contact-us.compone
 import { PromoteCardBigComponent } from '../../components/promote-card/promote-card-big.component';
 import { CardComponentProvider } from '../../components/promote-card/promotecard.context';
 import { useTranslation } from 'react-i18next';
+
 import f1 from '../../assets/images/features/f1.jpg'
 import f2 from '../../assets/images/features/f2.jpg'
 import f3 from '../../assets/images/features/f3.jpg'
