@@ -22,7 +22,7 @@ export const ContactUsCpmponent = () => {
         <div className="form-inputs flex flex-col items-center justify-center gap-4 w-full">
           <ContactFormCmp />
           <ContactFormCmp formType="Email" />
-          <TextAreaCmp maxLength={200} />
+          <TextAreaCmp />
         </div>
 
         <div className="about-us-btns mt-10 flex justify-end">
