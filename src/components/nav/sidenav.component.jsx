@@ -4,17 +4,13 @@ import { Link } from 'react-router-dom';
 import { BtnComponent } from '../btn/btn-component.jsx';
 import { Varhub } from '../../var-hub.context.jsx';
 import { useTranslation } from 'react-i18next';
+import ThemeSwitch from '../theme-switch/ThemeSwitch.jsx';
+import LanguageSwitch from '../language-switch/LanguageSwitch.jsx';
 
 export const SideNavComponent = ({ toggleSideNav }) => {
   const [t, i18n] = useTranslation()
   const [vars, setVars] = useContext(Varhub);
 
-  const toggleTheme = () => {
-    setVars((prevVars) => ({
-      ...prevVars,
-      isDarkTheme: !vars.isDarkTheme,
-    }));
-  };
   const langPrefix = i18n.language === 'en' ? '/en' : '';
 
   return (
@@ -23,9 +19,10 @@ export const SideNavComponent = ({ toggleSideNav }) => {
                       bg-light-background dark:bg-dark-background h-full w-full">
 
       <div className='flex justify-center items-center mt-5 pt-5 px-10'>
-          <span onClick={toggleTheme}>
-          <BtnComponent btnText={`${vars.isDarkTheme ? t('nav.themes.0') : t('nav.themes.1')}`} />
-          </span>
+      <div className="buttons flex gap-2 items-center justify-between">
+            <LanguageSwitch />
+            <ThemeSwitch />
+          </div>
         </div>
 
         <ul className="sidenav-options flex flex-col items-center justify-center lg:gap-[45px] gap-[25px] text-md lg:text-lg mt-10">

@@ -15,7 +15,6 @@ import { ServicesComponent } from './pages/services/services.component';
 function App() {
   const [vars, setVars] = useContext(Varhub);
   const [t, i18n] = useTranslation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Update the background color of the >> body << based on the theme
@@ -43,41 +42,11 @@ function App() {
     }
   }, [setVars, i18n]);
 
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    setVars((prevVars) => ({
-      ...prevVars,
-      language: lang,
-    }));
-
-    let currentPath = location.pathname;
-    currentPath = currentPath.replace(/^\/(en|fi)/, '');
-
-    // Navigate to the same path with the new language prefix
-    if (lang === 'en') {
-      navigate(`/en${currentPath}${location.search}`);
-    } else {
-      navigate(`${currentPath}${location.search}`);
-    }
-  };
-
   return (
     <div
       className={`${
         vars.isDarkTheme ? 'dark' : ''
       } flex flex-col min-h-screen`}>
-      <div className="btns fixed bottom-5 left-5 z-50 rounded-md p-5 flex flex-col gap-5">
-        <button
-          className="p-2 text-center  w-20 rounded-lg shadow-xl dark:bg-light-background bg-dark-background text-light-background dark:text-light-foreground"
-          onClick={() => changeLanguage('en')}>
-          EN
-        </button>
-        <button
-          className="p-2 text-center w-20 rounded-lg shadow-xl dark:bg-light-background bg-dark-background text-light-background dark:text-light-foreground"
-          onClick={() => changeLanguage('fi')}>
-          FI
-        </button>
-      </div>
       <div>
         <NavComponent />
       </div>

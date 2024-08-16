@@ -14,16 +14,16 @@ import useWidth from '../../hooks/useWindowWidth.hook.jsx';
 import { SideNavComponent } from './sidenav.component.jsx';
 import { Varhub } from '../../var-hub.context.jsx';
 import { useTranslation } from 'react-i18next';
+import ThemeSwitch from '../theme-switch/ThemeSwitch.jsx';
+import LanguageSwitch from '../language-switch/LanguageSwitch.jsx';
 
 export const NavComponent = () => {
-  const { t, i18n } = useTranslation();
+  
   const width = useWidth();
   const [isSidenav, setSidenav] = useState(false);
   const [vars, setVars] = useContext(Varhub);
 
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  
 
   const toggleSidenav = () => {
     setSidenav((prevState) => {
@@ -31,13 +31,6 @@ export const NavComponent = () => {
       document.body.style.overflow = newSidenavState ? 'hidden' : 'auto';
       return newSidenavState;
     });
-  };
-
-  const toggleTheme = () => {
-    setVars((prevVars) => ({
-      ...prevVars,
-      isDarkTheme: !vars.isDarkTheme,
-    }));
   };
 
   return (
@@ -60,10 +53,9 @@ export const NavComponent = () => {
         <div className="navbar-options flex justify-between flex-1">
           <NavOptionsCmp />
 
-          <div className="buttons" onClick={toggleTheme}>
-            <BtnComponent
-              btnText={vars.isDarkTheme ? t('nav.themes.0') : t('nav.themes.1')}
-            />
+          <div className="buttons flex gap-2 items-center justify-between">
+            <LanguageSwitch />
+            <ThemeSwitch />
           </div>
         </div>
       ) : (
@@ -85,7 +77,6 @@ export const NavComponent = () => {
             {isSidenav && (
               <SideNavComponent
                 toggleSideNav={toggleSidenav}
-                toggleTheme={toggleTheme}
               />
             )}
           </>
