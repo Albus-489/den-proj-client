@@ -71,7 +71,7 @@ const TextAreaCmp = ({ label = 'Message', maxLength = 1500 }) => {
       <textarea
         className="bg-transparent w-full p-2
                                   border-[1px] border-dark-background dark:border-dark-foreground
-                                  rounded-2xl focus:outline-none max-h-28 min-h-24 overflow-auto"
+                                  rounded-2xl focus:outline-none max-h-44 min-h-24 overflow-auto"
         placeholder={t('contact-us.form-content.message')}
         maxLength={maxLength}
         name={label}></textarea>
