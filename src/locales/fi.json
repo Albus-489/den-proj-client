@@ -1,7 +1,7 @@
 {
   "nav": {
     "options": [
-      { "name": "Koti", "path": "/" }
+      { "name": "Etusivu", "path": "/" }
     ],
     "themes": ["Päivä", "Yö"]
   },
