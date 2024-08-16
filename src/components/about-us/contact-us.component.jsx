@@ -62,7 +62,7 @@ const ContactFormCmp = ({ formType = 'Name' }) => {
   );
 };
 
-const TextAreaCmp = ({ label = 'Message', maxLength = 200 }) => {
+const TextAreaCmp = ({ label = 'Message', maxLength = 1500 }) => {
   const [t, i18n] = useTranslation();
 
   return (
