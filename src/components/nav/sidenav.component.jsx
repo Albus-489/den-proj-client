@@ -15,7 +15,7 @@ export const SideNavComponent = ({ toggleSideNav }) => {
 
   return (
     <div className={`${vars.isDarkTheme ? 'dark' : ''}`}>
-      <div className="nc-sidenav absolute top-[18%] left-0 z-10
+      <div className="nc-sidenav absolute top-[14%] left-0 z-10
                       bg-light-background dark:bg-dark-background h-full w-full">
 
       <div className='flex justify-center items-center mt-5 pt-5 px-10'>

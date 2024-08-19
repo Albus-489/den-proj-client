@@ -15,7 +15,10 @@
     ]
   },
   "nav": {
-    "options": [{ "name": "Home", "path": "/" }],
+    "options": [
+      { "name": "Home", "path": "/" },
+      { "name": "Services", "path": "/services" }
+    ],
     "themes": ["Day", "Night"]
   },
   "heading-cmp": {
@@ -119,5 +122,154 @@
         "Sitemap"
       ]
     }
-  }
+  },
+  "services-page": [
+    {
+      "heading": {
+        "text": "Renovation of Individual Rooms",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Renovation of the living room", "path": "/living-room" },
+        { "name": "Renovation of the bedroom", "path": "/bedroom" },
+        {
+          "name": "Renovation of the children's room",
+          "path": "/children-room"
+        },
+        { "name": "Renovation of the hallway", "path": "/hallway" },
+        { "name": "Renovation of the kitchen", "path": "/kitchen" },
+        {
+          "name": "Renovation and finishing of the bathroom",
+          "path": "/bathroom"
+        },
+        { "name": "Renovation of the toilets", "path": "/toilets" },
+        { "name": "Renovation of the sauna", "path": "/sauna" }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Apartment Renovation",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Cosmetic Renovation", "path": "/cosmetic-renovation" },
+        { "name": "Major Renovation", "path": "/major-renovation" },
+        { "name": "Studio Apartment Renovation", "path": "/studio-renovation" },
+        {
+          "name": "Two-Room Apartment Renovation",
+          "path": "/two-room-renovation"
+        },
+        {
+          "name": "Three-Room Apartment Renovation",
+          "path": "/three-room-renovation"
+        },
+        {
+          "name": "Four-Room Apartment Renovation",
+          "path": "/four-room-renovation"
+        },
+        { "name": "Duplex Apartment Renovation", "path": "/duplex-renovation" },
+        { "name": "Townhouse Renovation", "path": "/townhouse-renovation" },
+        {
+          "name": "Renovation of Secondary Housing",
+          "path": "/secondary-housing-renovation"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Commercial Space Renovation",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        {
+          "name": "Shopping Mall Renovation",
+          "path": "/shopping-mall-renovation"
+        },
+        {
+          "name": "Cafe and Restaurant Renovation",
+          "path": "/cafe-restaurant-renovation"
+        },
+        { "name": "Store Renovation", "path": "/store-renovation" },
+        {
+          "name": "Business Center Renovation",
+          "path": "/business-center-renovation"
+        },
+        {
+          "name": "Office or Cabinet Renovation",
+          "path": "/office-renovation"
+        },
+        { "name": "Warehouse Renovation", "path": "/warehouse-renovation" },
+        { "name": "Hotel Renovation", "path": "/hotel-renovation" },
+        {
+          "name": "Kindergarten Renovation",
+          "path": "/kindergarten-renovation"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Finishing Work",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Floor Renovation", "path": "/floor-renovation" },
+        { "name": "Floor Leveling", "path": "/floor-leveling" },
+        { "name": "Floor Screed", "path": "/floor-screed" },
+        {
+          "name": "Laminate Flooring Installation",
+          "path": "/laminate-installation"
+        },
+        {
+          "name": "Parquet Flooring Installation",
+          "path": "/parquet-installation"
+        },
+        { "name": "Wall Renovation and Finishing", "path": "/wall-renovation" },
+        { "name": "Partition Installation", "path": "/partition-installation" },
+        { "name": "Wall Leveling", "path": "/wall-leveling" },
+        {
+          "name": "Wall and Ceiling Painting",
+          "path": "/painting-walls-ceilings"
+        },
+        { "name": "Wall Cleaning", "path": "/wall-cleaning" },
+        {
+          "name": "House Exterior Wall Painting",
+          "path": "/house-wall-painting"
+        },
+        { "name": "Wallpapering", "path": "/wallpapering" },
+        { "name": "Tile Installation", "path": "/tile-installation" },
+        { "name": "Epoxy Grouting", "path": "/epoxy-grouting" },
+        { "name": "Slope Finishing", "path": "/slope-finishing" }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Materials",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Rough Materials", "path": "/rough-materials" },
+        {
+          "name": "Finishing Materials and Equipment",
+          "path": "/finishing-materials-equipment"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Other Work",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Snow Removal from Roofs", "path": "/snow-removal-roofs" },
+        { "name": "Snow Removal", "path": "/snow-removal" },
+        { "name": "Demolition", "path": "/demolition" }
+      ]
+    }
+  ]
 }

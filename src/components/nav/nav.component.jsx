@@ -39,14 +39,12 @@ export const NavComponent = () => {
                     md:px-12 md:py-8 p-5 max-w-[1200px] my-0 mx-auto 
                     flex items-center justify-between z-40 select-none">
       <div className="navbar-logo cursor-pointer">
-        <Link to="/">
           {/* <h1 className="text-2xl text-orange-500">DEN LOGO</h1> */}
           <img
             src={vars.isDarkTheme ? asunno_logo_dark : asunno_logo}
             className="w-[200px]"
             alt=""
           />
-        </Link>
       </div>
 
       {width > 770 ? (

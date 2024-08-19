@@ -16,7 +16,10 @@
   },
 
   "nav": {
-    "options": [{ "name": "Etusivu", "path": "/" }],
+    "options": [
+      { "name": "Home", "path": "/" },
+      { "name": "Services", "path": "/services" }
+    ],
     "themes": ["Päivä", "Yö"]
   },
 
@@ -121,5 +124,136 @@
         "Sivukartta"
       ]
     }
-  }
+  },
+  "services-page": [
+    {
+      "heading": {
+        "text": "Yksittäisten Huoneiden Remontti",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Olohuoneen remontti", "path": "/living-room" },
+        { "name": "Makuuhuoneen remontti", "path": "/bedroom" },
+        { "name": "Lastenhuoneen remontti", "path": "/children-room" },
+        { "name": "Eteisen remontti", "path": "/hallway" },
+        { "name": "Keittiön remontti", "path": "/kitchen" },
+        { "name": "Kylpyhuoneen remontti ja viimeistely", "path": "/bathroom" },
+        { "name": "WC:n remontti", "path": "/toilets" },
+        { "name": "Saunan remontti", "path": "/sauna" }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Asunnon Remontti",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Kosmeettinen remontti", "path": "/cosmetic-renovation" },
+        { "name": "Peruskorjaus", "path": "/major-renovation" },
+        { "name": "Yksiön remontti", "path": "/studio-renovation" },
+        { "name": "Kaksion remontti", "path": "/two-room-renovation" },
+        { "name": "Kolmion remontti", "path": "/three-room-renovation" },
+        {
+          "name": "Neljän huoneen asunnon remontti",
+          "path": "/four-room-renovation"
+        },
+        {
+          "name": "Kaksikerroksisen asunnon remontti",
+          "path": "/duplex-renovation"
+        },
+        { "name": "Rivitalon remontti", "path": "/townhouse-renovation" },
+        {
+          "name": "Käytetyn asunnon remontti",
+          "path": "/secondary-housing-renovation"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Liiketilojen Remontti",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        {
+          "name": "Ostoskeskuksen remontti",
+          "path": "/shopping-mall-renovation"
+        },
+        {
+          "name": "Kahvilan ja ravintolan remontti",
+          "path": "/cafe-restaurant-renovation"
+        },
+        { "name": "Myymälän remontti", "path": "/store-renovation" },
+        {
+          "name": "Liikekeskuksen remontti",
+          "path": "/business-center-renovation"
+        },
+        {
+          "name": "Toimiston tai työhuoneen remontti",
+          "path": "/office-renovation"
+        },
+        { "name": "Varastotilan remontti", "path": "/warehouse-renovation" },
+        { "name": "Hotellin remontti", "path": "/hotel-renovation" },
+        { "name": "Päiväkodin remontti", "path": "/kindergarten-renovation" }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Viimeistelytyöt",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Lattian remontti", "path": "/floor-renovation" },
+        { "name": "Lattian tasoitus", "path": "/floor-leveling" },
+        { "name": "Lattian valu", "path": "/floor-screed" },
+        { "name": "Laminaatin asennus", "path": "/laminate-installation" },
+        { "name": "Parketin asennus", "path": "/parquet-installation" },
+        {
+          "name": "Seinien remontti ja viimeistely",
+          "path": "/wall-renovation"
+        },
+        { "name": "Väliseinien asennus", "path": "/partition-installation" },
+        { "name": "Seinien tasoitus", "path": "/wall-leveling" },
+        {
+          "name": "Seinien ja kattojen maalaus",
+          "path": "/painting-walls-ceilings"
+        },
+        { "name": "Seinien pesu", "path": "/wall-cleaning" },
+        { "name": "Talon ulkoseinien maalaus", "path": "/house-wall-painting" },
+        { "name": "Tapetointi", "path": "/wallpapering" },
+        { "name": "Laatoitus", "path": "/tile-installation" },
+        { "name": "Epoksisaumaus", "path": "/epoxy-grouting" },
+        { "name": "Räystäiden viimeistely", "path": "/slope-finishing" }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Materiaalit",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Rakenne- ja raakamateriaalit", "path": "/rough-materials" },
+        {
+          "name": "Viimeistelymateriaalit ja laitteet",
+          "path": "/finishing-materials-equipment"
+        }
+      ]
+    },
+    {
+      "heading": {
+        "text": "Muut Työt",
+        "image": "https://www.bullseyecyprus.com/wp-content/uploads/2019/10/ROOM-REPAIR-RENOVATION-1024x683.jpg",
+        "alt": ""
+      },
+      "content": [
+        { "name": "Lumien poisto katoilta", "path": "/snow-removal-roofs" },
+        { "name": "Lumien poisto", "path": "/snow-removal" },
+        { "name": "Purkutyöt", "path": "/demolition" }
+      ]
+    }
+  ]
 }

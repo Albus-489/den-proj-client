@@ -6,7 +6,7 @@ import { HomePage } from './pages/home/home.page';
 import { Varhub } from './var-hub.context';
 import { FooterComponent } from './components/footer/footer.component';
 import { useTranslation } from 'react-i18next';
-import { ServicesComponent } from './pages/services/services.component';
+import { ServicesPage } from './pages/services/services.page';
 
 function App() {
   const [vars, setVars] = useContext(Varhub);
@@ -46,15 +46,13 @@ function App() {
       <div>
         <NavComponent />
       </div>
-      <main className="flex flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/en" element={<HomePage />} />
 
-          <Route path="/services" element={<ServicesComponent />} />
-          <Route path="/en/services" element={<ServicesComponent />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/en/services" element={<ServicesPage />} />
         </Routes>
-      </main>
       <FooterComponent />
     </div>
   );
