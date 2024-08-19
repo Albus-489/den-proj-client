@@ -8,7 +8,7 @@ import {
   featuresContentFirst,
   featuresContentSecond,
 } from '../../assets/collections/features-content.collection';
-import { ContactUsCpmponent } from '../../components/about-us/contact-us.component';
+import { ContactUsComponent } from '../../components/about-us/contact-us.component';
 import { PromoteCardBigComponent } from '../../components/promote-card/promote-card-big.component';
 import { CardComponentProvider } from '../../components/promote-card/promotecard.context';
 import { useTranslation } from 'react-i18next';
@@ -30,7 +30,7 @@ export const HomePage = () => {
       <div className="home-page dark:text-dark-foreground select-none my-0 mx-auto max-w-[1800px] md:shadow-inner-light md:dark:shadow-inner-daynight-dim">
         <div className="homepage-contact-us p-10 max-sm:px-2 grid grid-flow-col auto-cols-fr gap-2 max-lg:grid-flow-row">
           <HeadingCmp />
-          <ContactUsCpmponent />
+          <ContactUsComponent />
         </div>
         <div className="mb-5"></div>
         <BannerComponent
