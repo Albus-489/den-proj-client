@@ -28,17 +28,22 @@ export default function LanguageSwitch() {
   };
 
   return (
-    <div className="btns z-50 rounded-md p-5 flex gap-5">
+    <div className="btns z-50 rounded-md p-3 flex gap-5">
       <button
-        className="p-1 text-center  w-20 rounded-lg shadow-xl dark:bg-light-background bg-dark-background text-light-background dark:text-light-foreground"
+        className={BtnClassname()}
         onClick={() => changeLanguage('en')}>
         EN
       </button>
       <button
-        className="p-1 text-center w-20 rounded-lg shadow-xl dark:bg-light-background bg-dark-background text-light-background dark:text-light-foreground"
+        className={BtnClassname()}
         onClick={() => changeLanguage('fi')}>
         FI
       </button>
     </div>
   );
+}
+
+function BtnClassname(){
+  const className = "p-1 text-center w-9 h-9 rounded-md shadow-xl dark:bg-light-background bg-dark-background text-light-background dark:text-light-foreground";
+  return className;
 }

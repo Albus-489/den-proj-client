@@ -5,10 +5,6 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { HomePage } from './pages/home/home.page';
 import { Varhub } from './var-hub.context';
 import { FooterComponent } from './components/footer/footer.component';
-
-import enTranslations from './locale_test/i18n/en.json';
-import fiTranslations from './locale_test/i18n/fi.json';
-import TestComponent from './components/test/test-locale';
 import { useTranslation } from 'react-i18next';
 import { ServicesComponent } from './pages/services/services.component';
 

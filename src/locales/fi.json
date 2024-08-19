@@ -1,8 +1,22 @@
 {
-  "nav": {
-    "options": [
-      { "name": "Etusivu", "path": "/" }
+  "Banner": {
+    "alts-first": [
+      "rajan asettaminen",
+      "paikallisen alueen aitaus",
+      "katon korjaus",
+      "päällystyslaattojen asettaminen",
+      "laattojen asettamista"
     ],
+    "alts-second": [
+      "laattojen asettaminen telineiden avulla",
+      "laattojen purkaminen",
+      "rajan asettaminen",
+      "talon seinien maalaus"
+    ]
+  },
+
+  "nav": {
+    "options": [{ "name": "Etusivu", "path": "/" }],
     "themes": ["Päivä", "Yö"]
   },
 
@@ -32,16 +46,19 @@
     "firstInstance": [
       {
         "pic": "/src/assets/images/features/f1.jpg",
+        "alt": "mies liimaa taustakuvaa",
         "heading": "Laadukas Työnjälki",
         "text": "Tarjoamme korkealaatuisia remontointipalveluja, jotka parantavat asuinympäristöäsi."
       },
       {
         "pic": "/src/assets/images/features/f2.jpg",
+        "alt": "olohuone näkymä",
         "heading": "Räätälöidyt Ratkaisut",
         "text": "Räätälöidyt remonttisuunnitelmat"
       },
       {
         "pic": "/src/assets/images/features/f3.jpg",
+        "alt": "laudan sahaus",
         "heading": "Asiantuntijatiimi",
         "text": "Kokenut ja ammattitaitoinen tiimi"
       }
@@ -49,16 +66,19 @@
     "secondInstance": [
       {
         "pic": "/src/assets/images/features/f1.jpg",
+        "alt": "talon perustus",
         "heading": "Ilmainen Arviovalmistelu",
         "text": "Arvio lasketaan mahdollisimman pian ja lähetetään sinulle sähköpostitse tarkistettavaksi ja muokattavaksi."
       },
       {
         "pic": "/src/assets/images/features/f2.jpg",
+        "alt": "rakennustelineiden rakentaminen",
         "heading": "Ammattitaitoinen Tiimi",
         "text": "Kokenut ammattilaistiimimme on sitoutunut tarjoamaan korkealaatuisia kodin remontointipalveluja."
       },
       {
         "pic": "/src/assets/images/features/f3.jpg",
+        "alt": "seinien maalaus",
         "heading": "Ei Ennakkoveloitusta",
         "text": "Maksu suoritetaan, kun jokainen työvaihe on valmis."
       }

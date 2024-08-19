@@ -1,8 +1,21 @@
 {
-  "nav": {
-    "options": [
-      { "name": "Home", "path": "/" }
+  "Banner": {
+    "alts-first": [
+      "laying the border",
+      "enclosure of the local area",
+      "roof repair",
+      "laying paving slabs",
+      "laying tiles"
     ],
+    "alts-second":[
+      "laying tiles using scaffolding",
+      "dismantling tiles",
+      "laying the border",
+      "painting the walls of the house"
+    ]
+  },
+  "nav": {
+    "options": [{ "name": "Home", "path": "/" }],
     "themes": ["Day", "Night"]
   },
   "heading-cmp": {
@@ -31,16 +44,19 @@
     "firstInstance": [
       {
         "pic": "/src/assets/images/features/f1.jpg",
+        "alt": "man pasting wallpaper",
         "heading": "Quality Workmanship",
         "text": "We deliver high-quality renovation services to enhance your living space."
       },
       {
         "pic": "/src/assets/images/features/f2.jpg",
+        "alt": "living room view",
         "heading": "Tailored Solutions",
         "text": "Customized Renovation Plans"
       },
       {
         "pic": "/src/assets/images/features/f3.jpg",
+        "alt": "sawing a board",
         "heading": "Expert Team",
         "text": "Experienced and Professional Team"
       }
@@ -48,16 +64,19 @@
     "secondInstance": [
       {
         "pic": "/src/assets/images/features/f1.jpg",
+        "alt": "house foundation",
         "heading": "Free Estimate Preparation",
         "text": "The estimate will be calculated as soon as possible and sent to you by email for review and adjustments."
       },
       {
         "pic": "/src/assets/images/features/f2.jpg",
+        "alt": "construction of scaffolding",
         "heading": "Professional Team",
         "text": "Our team of experienced professionals is dedicated to providing high-quality home renovation services."
       },
       {
         "pic": "/src/assets/images/features/f3.jpg",
+        "alt": "painting the walls",
         "heading": "No Advance Payment",
         "text": "Payment is made after each stage of work is completed."
       }

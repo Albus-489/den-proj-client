@@ -13,18 +13,18 @@ import { PromoteCardBigComponent } from '../../components/promote-card/promote-c
 import { CardComponentProvider } from '../../components/promote-card/promotecard.context';
 import { useTranslation } from 'react-i18next';
 
-import f1 from '../../assets/images/features/f1.jpg'
-import f2 from '../../assets/images/features/f2.jpg'
-import f3 from '../../assets/images/features/f3.jpg'
-import f4 from '../../assets/images/features/f4.jpg'
-import f5 from '../../assets/images/features/f5.jpg'
-import f6 from '../../assets/images/features/f6.jpg'
+import f1 from '../../assets/images/features/f1.jpg';
+import f2 from '../../assets/images/features/f2.jpg';
+import f3 from '../../assets/images/features/f3.jpg';
+import f4 from '../../assets/images/features/f4.jpg';
+import f5 from '../../assets/images/features/f5.jpg';
+import f6 from '../../assets/images/features/f6.jpg';
 
 export const HomePage = () => {
   const { heroImages } = useContext(HomePageContext);
-  const featuresImagesFirst = [f1, f2, f3]
-  const featuresImagesSecond = [f4, f5, f6]
-  const [t, i18n] = useTranslation()
+  const featuresImagesFirst = [f1, f2, f3];
+  const featuresImagesSecond = [f4, f5, f6];
+  const [t, i18n] = useTranslation();
   return (
     <HomePageProvider>
       <div className="home-page dark:text-dark-foreground select-none my-0 mx-auto max-w-[1800px] md:shadow-inner-light md:dark:shadow-inner-daynight-dim">
@@ -33,23 +33,31 @@ export const HomePage = () => {
           <ContactUsCpmponent />
         </div>
         <div className="mb-5"></div>
-        <BannerComponent speed={30} images={heroImages.slice(0, 5)} />
+        <BannerComponent
+          speed={30}
+          images={heroImages.slice(0, 5)}
+        />
         <div className="mb-5"></div>
         <BannerComponent
           speed={20}
           images={heroImages.slice(5)}
           isReverse={true}
+          isSecond={true}
         />
         <div className="mb-10"></div>
 
-        <FeaturesComponent featuresContent={t('features.firstInstance', {returnObjects: true})} />
+        <FeaturesComponent
+          featuresContent={t('features.firstInstance', { returnObjects: true })}
+        />
         <div className="mb-16"></div>
         <div className="mb-10">
-            <PromoteCardBigComponent />
+          <PromoteCardBigComponent />
         </div>
         <div className="mb-16 max-sm:mt-[150px]"></div>
         <FeaturesComponent
-          featuresContent={t('features.secondInstance', {returnObjects: true})}
+          featuresContent={t('features.secondInstance', {
+            returnObjects: true,
+          })}
           isReverse={true}
           aspect="square"
           imgs={featuresImagesSecond}
@@ -72,17 +80,21 @@ export const HomePage = () => {
 };
 
 const HeadingCmp = ({ isBottom = false }) => {
-
-  const [t, i18n] = useTranslation()
+  const [t, i18n] = useTranslation();
 
   return (
-    <div className={`px-11 ${i18n.language === 'fi' && 'break-all'}`}>
+    <div
+      className={`px-11 ${
+        i18n.language === 'fi' && 'break-all'
+      } flex flex-col justify-center items-center`}>
       <h1
-      style={{wordBreak:'anywhere'}}
+        style={{ wordBreak: 'anywhere' }}
         className="homepage-column flex flex-col 
                      items-center justify-center 
                      text-[48px] font-bold text-center leading-normal">
-        {isBottom ? t('heading-cmp.bottom.heading') : t('heading-cmp.top.heading')}
+        {isBottom
+          ? t('heading-cmp.bottom.heading')
+          : t('heading-cmp.top.heading')}
       </h1>
 
       <p className="text-start text-[18px] my-5">

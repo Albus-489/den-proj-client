@@ -36,7 +36,7 @@ export const NavComponent = () => {
   return (
     <div
       className="navbar bg-light-background dark:bg-dark-background dark:text-dark-foreground
-                    md:px-18 md:py-8 p-5 max-w-[1200px] my-0 mx-auto 
+                    md:px-12 md:py-8 p-5 max-w-[1200px] my-0 mx-auto 
                     flex items-center justify-between z-40 select-none">
       <div className="navbar-logo cursor-pointer">
         <Link to="/">
@@ -53,7 +53,7 @@ export const NavComponent = () => {
         <div className="navbar-options flex justify-between flex-1">
           <NavOptionsCmp />
 
-          <div className="buttons flex gap-2 items-center justify-between">
+          <div className="buttons flex gap-5 items-center justify-between">
             <LanguageSwitch />
             <ThemeSwitch />
           </div>
