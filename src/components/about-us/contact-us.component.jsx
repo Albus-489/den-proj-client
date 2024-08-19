@@ -1,9 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BtnComponent } from '../btn/btn-component';
 import { useTranslation } from 'react-i18next';
 
-export const ContactUsCpmponent = () => {
-  const [t, i18n] = useTranslation();
+export const ContactUsComponent = () => {
+  const [t] = useTranslation();
+  const [formErrors, setFormErrors] = useState({});
+
+  const handleValidation = (formData) => {
+    let errors = {};
+    if (!formData.get('Name')) {
+      errors.name = t('contact-us.errors.nameRequired');
+    }
+    if (!formData.get('Email')) {
+      errors.email = t('contact-us.errors.emailRequired');
+    }
+    if (!formData.get('Phone')) {
+      errors.phone = t('contact-us.errors.phoneRequired');
+    }
+    if (!formData.get('Message')) {
+      errors.message = t('contact-us.errors.messageRequired');
+    }
+    return errors;
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    const errors = handleValidation(formData);
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    } else {
+      setFormErrors({});
+    }
+
+    const data = {
+      name: formData.get('Name'),
+      email: formData.get('Email'),
+      phone: formData.get('Phone'),
+      message: formData.get('Message'),
+    };
+
+    const chatIds = import.meta.env.VITE_REACT_APP_TELEGRAM_CHAT_IDS.split(',');
+
+    for (const chatId of chatIds) {
+      await sendMessage(chatId, data);
+    }
+  };
 
   return (
     <div
@@ -19,17 +66,18 @@ export const ContactUsCpmponent = () => {
           {t('contact-us.heading')}
         </div>
 
-        <div className="form-inputs flex flex-col items-center justify-center gap-4 w-full">
-          <ContactFormCmp />
-          <ContactFormCmp formType="Email" />
-          <TextAreaCmp />
+        <div className="form-inputs flex flex-col items-center justify-center gap-5 w-full">
+          <ContactFormCmp formType="Name" error={formErrors.name} />
+          <ContactFormCmp formType="Email" error={formErrors.email} />
+          <ContactFormCmp formType="Phone" error={formErrors.phone} />
+          <TextAreaCmp error={formErrors.message} />
         </div>
 
         <div className="about-us-btns mt-10 flex justify-end">
           <button
             type="submit"
             className="appearance-none focus:outline-none p-0 m-0 bg-transparent border-none w-[150px]">
-            <BtnComponent className="" btnType="wide" btnText={t('contact-us.btn-text')} />
+            <BtnComponent btnType="wide" btnText={t('contact-us.btn-text')} />
           </button>
         </div>
       </form>
@@ -37,37 +85,48 @@ export const ContactUsCpmponent = () => {
   );
 };
 
-const ContactFormCmp = ({ formType = 'Name' }) => {
-  const [t, i18n] = useTranslation();
+const ContactFormCmp = ({ formType, error }) => {
+  const [t] = useTranslation();
+  const placeholders = {
+    Name: t('contact-us.form-content.name'),
+    Email: t('contact-us.form-content.email'),
+    Phone: t('contact-us.form-content.phone'),
+  };
+
+  const inputTypes = {
+    Name: 'text',
+    Email: 'email',
+    Phone: 'tel',
+  };
+
   return (
-    <div className="flex max-sm:flex-col max-sm:items-center justify-between w-full">
-      <div className="form-name">
-        {formType === 'Name'
-          ? t('contact-us.form-content.name')
-          : t('contact-us.form-content.email')}
-      </div>
+    <div className="flex flex-col justify-between w-full">
+      <div className="form-name px-12">{placeholders[formType]}</div>
       <input
-        className="bg-transparent w-[80%] max-sm:w-[90%]
+        className="bg-transparent my-0 mx-auto w-[80%] max-sm:w-[90%]
                                   border-[1px] border-dark-background dark:border-dark-foreground
                                   rounded-2xl text-center focus:outline-none h-9"
-        type={formType === 'Name' ? 'username' : 'email'}
+        type={inputTypes[formType]}
         name={formType}
-        placeholder={
-          formType === 'Name'
-            ? t('contact-us.form-content.name')
-            : t('contact-us.form-content.email')
-        }
+        placeholder={placeholders[formType]}
       />
+      {error && (
+        <div className="text-red-500 text-xs mt-1 text-center">
+          {error}
+        </div>
+      )}
     </div>
   );
 };
 
-const TextAreaCmp = ({ label = 'Message', maxLength = 1500 }) => {
-  const [t, i18n] = useTranslation();
+const TextAreaCmp = ({ label = 'Message', maxLength = 1500, error }) => {
+  const [t] = useTranslation();
 
   return (
     <div className="flex flex-col w-full mt-5">
-      <label className="form-label mb-2 text-center">{t('contact-us.form-content.message')}</label>
+      <label className="form-label mb-2 text-center">
+        {t('contact-us.form-content.message')}
+      </label>
       <textarea
         className="bg-transparent w-full p-2
                                   border-[1px] border-dark-background dark:border-dark-foreground
@@ -75,36 +134,21 @@ const TextAreaCmp = ({ label = 'Message', maxLength = 1500 }) => {
         placeholder={t('contact-us.form-content.message')}
         maxLength={maxLength}
         name={label}></textarea>
+      {error && (
+        <div className="text-red-500 text-xs mt-1 text-center">
+          {error}
+        </div>
+      )}
     </div>
   );
-};
-
-const handleSubmit = async (event) => {
-  event.preventDefault();
-
-  const form = event.target;
-
-  const formData = new FormData(form);
-
-  // Debug logs
-
-  const data = {
-    name: formData.get('Name'),
-    email: formData.get('Email'),
-    message: formData.get('Message'),
-  };
-
-  const chatIds = ['382706275', '156468920'];
-
-  for (const chatId of chatIds) {
-    await sendMessage(chatId, data);
-  }
 };
 
 const sendMessage = async (chatId, data) => {
   try {
     const response = await fetch(
-      `https://api.telegram.org/bot7197753056:AAEfHRLI4onyfvrw2SBHp-eDDLsSRHl7QOk/sendMessage`,
+      `https://api.telegram.org/bot${
+        import.meta.env.VITE_REACT_APP_TELEGRAM_BOT_TOKEN
+      }/sendMessage`,
       {
         method: 'POST',
         headers: {
@@ -112,7 +156,7 @@ const sendMessage = async (chatId, data) => {
         },
         body: JSON.stringify({
           chat_id: chatId,
-          text: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
+          text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nMessage: ${data.message}`,
         }),
       }
     );

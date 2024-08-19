@@ -69,11 +69,11 @@ const FooterTopCmp = () => {
     <div
       className={`w-full lg:px-[30%] px-10 py-8 dark:text-dark-foreground max-sm:text-center max-sm:gap-4 flex max-sm:flex-col justify-between items-center`}>
       {content.map((item, parentIndex) => {
-        const columns = ['services-content', 'company-content']
+        const columns = ['services-content', 'company-content'];
         return parentIndex < 2 ? (
           <>
             <div className="flex flex-col gap-2" key={parentIndex}>
-              <span className="font-bold text-lg mb-3">
+              <span className="font-bold text-lg mb-3" key={`s${parentIndex}`}>
                 {parentIndex < 1
                   ? t('footer.headings.services')
                   : t('footer.headings.copmpany')}
@@ -81,9 +81,13 @@ const FooterTopCmp = () => {
 
               {item.items.map((text, index) => {
                 return text === 'Contact Us' ? (
-                  <a href="#contact-us">{t(`footer.content.services-content.${index}`)}</a>
+                  <a href="#contact-us" key={index}>
+                    {t(`footer.content.services-content.${index}`)}
+                  </a>
                 ) : (
-                  <div className="cursor-pointer">{t(`footer.content.${columns[parentIndex]}.${index}`)}</div>
+                  <div className="cursor-pointer" key={index}>
+                    {t(`footer.content.${columns[parentIndex]}.${index}`)}
+                  </div>
                 );
               })}
             </div>
@@ -91,13 +95,20 @@ const FooterTopCmp = () => {
         ) : (
           <>
             <div className="flex flex-col gap-2">
-              <span className="font-bold text-lg mb-3">{t('footer.headings.connect')}</span>
+              <span className="font-bold text-lg mb-3">
+                {t('footer.headings.connect')}
+              </span>
 
               {item.items.map((socialItem, index) => {
                 return (
-                  <div className="flex gap-2">
-                    <img className="w-[25px]" src={socialItem.pic} alt="" />
-                    <div key={index} className="cursor-pointer">
+                  <div className="flex gap-2" key={index}>
+                    <img
+                      className="w-[25px]"
+                      src={socialItem.pic}
+                      key={`i${index}`}
+                      alt=""
+                    />
+                    <div className="cursor-pointer" key={`d${index}`}>
                       {socialItem.name}
                     </div>
                   </div>
@@ -128,7 +139,11 @@ const FooterBottomCmp = () => {
       <div className="policies">
         <ul>
           {policies.map((item, index) => {
-            return <li className="cursor-pointer">{item}</li>;
+            return (
+              <li className="cursor-pointer" key={index}>
+                {item}
+              </li>
+            );
           })}
         </ul>
       </div>
