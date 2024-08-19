@@ -37,9 +37,16 @@
     "form-content": {
       "name": "Nimi",
       "email": "Sähköposti",
+      "phone": "Puhelinnumero",
       "message": "Viesti"
     },
-    "btn-text": "Lähetä"
+    "btn-text": "Lähetä",
+    "errors": {
+      "nameRequired": "Nimi on pakollinen.",
+      "emailRequired": "Sähköposti on pakollinen.",
+      "phoneRequired": "Puhelinnumero on pakollinen.",
+      "messageRequired": "Viesti on pakollinen."
+    }
   },
 
   "features": {

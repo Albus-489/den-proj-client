@@ -7,7 +7,7 @@
       "laying paving slabs",
       "laying tiles"
     ],
-    "alts-second":[
+    "alts-second": [
       "laying tiles using scaffolding",
       "dismantling tiles",
       "laying the border",
@@ -35,9 +35,16 @@
     "form-content": {
       "name": "Name",
       "email": "Email",
+      "phone": "Phone number",
       "message": "Message"
     },
-    "btn-text": "Submit"
+    "btn-text": "Submit",
+    "errors": {
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required.",
+      "phoneRequired": "Phone number is required.",
+      "messageRequired": "Message is required."
+    }
   },
 
   "features": {
