@@ -1,0 +1,4 @@
+User-agent: *
+Allow: https://asunnonremontti.fi/
+
+Sitemap: https://asunnonremontti.fi/sitemap.xml
