@@ -40,6 +40,7 @@ const FooterTopCmp = () => {
         'Contact Us',
       ],
     },
+    //тут на сайте отображается ошибка Copmpany. Не понял как исправить
     {
       name: 'Company',
       items: [
@@ -134,7 +135,7 @@ const FooterBottomCmp = () => {
       className={`w-full h-44 px-4 md:px-[20%] py-8 dark:text-dark-foreground
                   flex justify-between max-sm:flex-col max-sm:items-center`}>
       <div className="copyright">
-        &copy; 2024 Den Company. All rights reserved.
+        &copy; 2024 Asunnonremontti.fi. All rights reserved.
       </div>
       <div className="policies">
         <ul>
